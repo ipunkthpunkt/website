@@ -20,6 +20,7 @@ body {
     background-color: #fff;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+    margin-bottom: 50px;
 }
 
 .container {
@@ -329,6 +330,9 @@ body {
     grid-area: tr;
     justify-content: flex-end;
     align-items: flex-start;
+    position: relative;
+    top: 7px;
+    right: 57px;
 }
 
 .color-bar img {
@@ -340,6 +344,9 @@ body {
     grid-area: bl;
     justify-content: flex-start;
     align-items: flex-end;
+    position: relative;
+    top: -37px;
+    right: -26px;
 }
 
 .monochrome-bar img {
