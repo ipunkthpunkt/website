@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPUNKThPUNKT | Grafikdesign & Kommunikation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <header class="header container">
+        <img src="assets/img/logo.png" alt="iPUNKThPUNKT" class="main-logo">
+    </header>
+
+    <main class="container">
+        <section class="icon-nav-wrapper">
+            <div class="main-buttons">
+                <div class="dot"><img src="assets/img/dot.png" alt=""></div>
+
+                <button class="icon-btn" onclick="revealInfo('profile')">
+                    <img src="assets/img/profile.png" alt="profile">
+                </button>
+                <button class="icon-btn" onclick="revealInfo('mail')">
+                    <img src="assets/img/mail.png" alt="mail">
+                </button>
+                <button class="icon-btn" onclick="revealInfo('phone')">
+                    <img src="assets/img/phone.png" alt="phone">
+                </button>
+                <button class="icon-btn" onclick="revealInfo('location')">
+                    <img src="assets/img/location-new.png" alt="address">
+                </button>
+
+                <div class="dot"><img src="assets/img/dot.png" alt=""></div>
+            </div>
+
+            <div id="info-display" class="info-display">
+                <span id="info-content"></span>
+            </div>
+        </section>
+
+        <section class="hero-intro">
+            <h1>Punktgenaue Gestaltung für <br><span class="accent-red">anspruchsvolle Kommunikation.</span></h1>
+        </section>
+
+        <section class="content-grid">
+            <div class="text-block">
+                <h3>Konzept & Strategie</h3>
+                <p>Gutes Design beginnt mit einer klaren Idee. Ich entwickle durchdachte Konzepte, die Ihre Markenwerte
+                    präzise transportieren.</p>
+            </div>
+            <div class="text-block">
+                <h3>Visuelle Identität</h3>
+                <p>Seit über 15 Jahren kreiere ich Corporate Designs, die Identität stiften – von Printkampagnen bis zum
+                    digitalen Interface.</p>
+            </div>
+            <div class="text-block">
+                <h3>Umsetzung</h3>
+                <p>Präzision im Detail. Ich begleite Projekte mit dem Blick fürs Ganze und sorge für eine technisch und
+                    ästhetisch überzeugende Umsetzung.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer container">
+        <div class="footer-flex">
+            <div class="social-links">
+                <a href="https://dasauge.de/-ipunkthpunkt/" target="_blank">dasauge</a>
+                <a href="https://www.xing.com/profile/Iris_Haun" target="_blank">XING</a>
+            </div>
+            <div class="legal">
+                <a href="impressum_datenschutz.html">Impressum | Datenschutz</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const infoData = {
+            'profile': 'Iris Haun — Dipl. Kommunikationsdesignerin (FH)',
+            'mail': '<a href="mailto:kontakt@ipunkthpunkt.com" style="color: #009FE3">kontakt@ipunkthpunkt.com</a>',
+            'phone': '<a href="tel:01635789737" style="color: #E6007E">0163 5789737</a>',
+            'location': '<a href="https://goo.gl/maps/KYCuobuGmZUi3bn17" target="_blank" style="color: #d4c700">Wartburgstraße 41 • 10823 Berlin</a>'
+        };
+
+        function revealInfo(type) {
+            const display = document.getElementById('info-content');
+            const container = document.getElementById('info-display');
+
+            // Fade out
+            container.style.opacity = 0;
+
+            setTimeout(() => {
+                display.innerHTML = infoData[type];
+                // Fade in
+                container.style.opacity = 1;
+            }, 200);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,182 @@
+:root {
+    --text-main: #1a1a1a;
+    --text-muted: #666;
+    --accent-red: #e30613;
+    --bg-light: #fafafa;
+    --mail-blue: #009FE3;
+    --phone-pink: #E6007E;
+    --loc-yellow: #d4c700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text-main);
+    background-color: #fff;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+/* --- HEADER & LOGO --- */
+.header {
+    padding: 80px 0 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.main-logo {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* --- ICON NAVIGATION (Main Page) --- */
+.icon-nav-wrapper {
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-buttons {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+}
+
+.icon-btn img {
+    height: 70px;
+    width: auto;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.icon-btn:hover img {
+    transform: translateY(-5px);
+}
+
+.dot img {
+    height: 10px;
+    width: auto;
+    opacity: 0.8;
+}
+
+/* --- INTERACTIVE REVEAL AREA --- */
+.info-display {
+    margin-top: 30px;
+    height: 30px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: opacity 0.3s ease;
+    opacity: 1;
+}
+
+#info-content a {
+    text-decoration: none;
+}
+
+/* --- HERO & CONTENT BLOCKS --- */
+.hero-intro {
+    padding: 40px 0 60px;
+    text-align: center;
+}
+
+.hero-intro h1 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.accent-red { color: var(--accent-red); }
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin: 60px 0 100px;
+}
+
+.text-block h3 {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--text-main);
+    display: inline-block;
+}
+
+.text-block p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+}
+
+/* --- LEGAL PAGE STYLING --- */
+.legal-content {
+    padding: 40px 0 100px;
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.legal-content h1 {
+    margin: 20px 0 30px;
+    border-bottom: 4px solid var(--accent-red);
+    display: inline-block;
+}
+
+.legal-content h2 { margin: 40px 0 20px; font-size: 1.5rem; }
+.legal-content h3 { margin: 25px 0 15px; font-size: 1.2rem; }
+.back-link { text-decoration: none; color: var(--accent-red); font-weight: 700; display: block; margin-bottom: 20px; }
+
+/* --- FOOTER --- */
+.footer {
+    padding: 40px 0;
+    border-top: 1px solid #eee;
+}
+
+.footer-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-links a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+.legal a {
+    color: #aaa;
+    text-decoration: none;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .main-logo { max-width: 85%; }
+    .main-buttons { gap: 15px; }
+    .icon-btn img { height: 32px; }
+    .footer-flex { flex-direction: column; gap: 20px; }
+    .hero-intro h1 { font-size: 1.8rem; }
+}
