@@ -11,6 +11,34 @@
 
 <body>
 
+    <!-- Edge Decoration -->
+    <div class="edge-container">
+        <div class="edge-element corner tl"></div>
+        <div class="edge-element corner tr"></div>
+        <div class="edge-element corner bl"></div>
+        <div class="edge-element corner br"></div>
+
+        <div class="edge-element top-center">
+            <div class="register-mark"></div>
+        </div>
+        <div class="edge-element bottom-center">
+            <div class="register-mark"></div>
+        </div>
+        <div class="edge-element mid-left">
+            <div class="register-mark"></div>
+        </div>
+        <div class="edge-element mid-right">
+            <div class="register-mark"></div>
+        </div>
+
+        <div class="edge-element color-bar"><img src="assets/img/color-palette.png" alt=""></div>
+        <div class="edge-element monochrome-bar"><img src="assets/img/monochrome-palette.png" alt=""></div>
+
+        <div class="edge-text top-left">iPUNKThPUNKT <span
+                style="font-weight: 300; margin-left: 10px;">GRAFIKDESIGN</span></div>
+        <div class="edge-text bottom-right">Impressum | Datenschutzerklärung</div>
+    </div>
+
     <header class="header container">
         <img src="assets/img/logo.png" alt="iPUNKThPUNKT" class="main-logo">
     </header>
@@ -18,8 +46,6 @@
     <main class="container">
         <section class="icon-nav-wrapper">
             <div class="main-buttons">
-                <div class="dot"><img src="assets/img/dot.png" alt=""></div>
-
                 <button class="icon-btn" onclick="revealInfo('profile')">
                     <img src="assets/img/profile.png" alt="profile">
                 </button>
@@ -32,8 +58,6 @@
                 <button class="icon-btn" onclick="revealInfo('location')">
                     <img src="assets/img/location-new.png" alt="address">
                 </button>
-
-                <div class="dot"><img src="assets/img/dot.png" alt=""></div>
             </div>
 
             <div id="info-display" class="info-display">

@@ -190,6 +190,10 @@ body {
 
 /* --- RESPONSIVE --- */
 @media (max-width: 768px) {
+    .header {
+        padding: 40px 0 20px;
+    }
+
     .main-logo {
         max-width: 85%;
     }
@@ -199,7 +203,7 @@ body {
     }
 
     .icon-btn img {
-        height: 32px;
+        height: 50px;
     }
 
     .footer-flex {
@@ -210,4 +214,146 @@ body {
     .hero-intro h1 {
         font-size: 1.8rem;
     }
+
+    /* Hide edge elements on small mobile */
+    .edge-element {
+        display: none !important;
+    }
+}
+
+/* --- EDGE DESIGN ELEMENTS --- */
+.edge-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1000;
+    padding: 20px;
+    display: grid;
+    grid-template-areas:
+        "tl tc tr"
+        "ml .  mr"
+        "bl bc br";
+    grid-template-columns: 50px 1fr 50px;
+    grid-template-rows: 50px 1fr 50px;
+}
+
+@media (max-width: 1200px) {
+    .edge-element.corner {
+        display: none;
+    }
+}
+
+.edge-element {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.6;
+}
+
+/* Register Marks (Dots) */
+.register-mark {
+    width: 12px;
+    height: 12px;
+    background-image: url('assets/img/dot.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.edge-element.top-center {
+    grid-area: tc;
+    align-items: flex-start;
+}
+
+.edge-element.bottom-center {
+    grid-area: bc;
+    align-items: flex-end;
+}
+
+.edge-element.mid-left {
+    grid-area: ml;
+    justify-content: flex-start;
+}
+
+.edge-element.mid-right {
+    grid-area: mr;
+    justify-content: flex-end;
+}
+
+/* Color Bars */
+.color-bar {
+    grid-area: tr;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.color-bar img {
+    height: 12px;
+    width: auto;
+}
+
+.monochrome-bar {
+    grid-area: bl;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.monochrome-bar img {
+    height: 12px;
+    width: auto;
+}
+
+/* Corner Frames */
+.corner {
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.corner.tl {
+    grid-area: tl;
+    background-image: url('assets/img/frame-1.png');
+    background-position: top left;
+}
+
+.corner.tr {
+    grid-area: tr;
+    background-image: url('assets/img/frame-2.png');
+    background-position: top right;
+}
+
+.corner.bl {
+    grid-area: bl;
+    background-image: url('assets/img/frame-3.png');
+    background-position: bottom left;
+}
+
+.corner.br {
+    grid-area: br;
+    background-image: url('assets/img/frame-4.png');
+    background-position: bottom right;
+}
+
+/* Edge Text */
+.edge-text {
+    position: absolute;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #999;
+    white-space: nowrap;
+}
+
+.edge-text.top-left {
+    top: 20px;
+    left: 80px;
+}
+
+.edge-text.bottom-right {
+    bottom: 20px;
+    right: 80px;
 }
